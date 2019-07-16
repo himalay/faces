@@ -29,10 +29,14 @@ fs.readdirSync(imgsPath)
           top: top < 0 ? y : top
         })
         .resize({ width: 200 })
+
+        // save thumbnails to faces folder
         //   .toFile(`./faces/${i}_${x}_${y}.jpg`)
         //   .then(info => {
         //     console.log('saved', info)
         //   })
+
+        // save to html as base64 data image
         .toBuffer()
         .then((data) => {
           fs.appendFileSync(
@@ -40,6 +44,8 @@ fs.readdirSync(imgsPath)
             `<img src="data:image/png;base64,${data.toString('base64')}" />`
           )
         })
+
+        // catch error
         .catch((error) => {
           console.log('An error occurred', error)
         })
