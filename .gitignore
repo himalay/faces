@@ -1,0 +1,7 @@
+node_modules
+faces/*
+!faces/.gitkeep
+images/*
+!images/.gitkeep
+faces.html
+.DS_Store
