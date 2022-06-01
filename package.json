@@ -11,6 +11,6 @@
   "license": "ISC",
   "dependencies": {
     "opencv4nodejs": "^5.1.0",
-    "sharp": "^0.22.1"
+    "sharp": "^0.30.5"
   }
 }
